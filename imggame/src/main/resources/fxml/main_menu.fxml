@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="imggame.controller.MainMenuController">
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT" styleClass="topbar">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10" />
+            </padding>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <ImageView fx:id="avatarImg" fitHeight="48" fitWidth="48" />
+                <VBox>
+                    <Label fx:id="usernameLabel" styleClass="user-name" />
+                    <Label fx:id="eloLabel" styleClass="user-elo" />
+                </VBox>
+            </HBox>
+            <Pane HBox.hgrow="ALWAYS" />
+            <HBox spacing="8">
+                <Button fx:id="settingsBtn" text="Settings" />
+                <Button fx:id="logoutBtn" text="Logout" />
+            </HBox>
+        </HBox>
+    </top>
+
+
+    <center>
+        <VBox spacing="12">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20" />
+            </padding>
+            <HBox spacing="12">
+                <Button text="Ghép ngẫu nhiên" onAction="#onRandomMatch" />
+                <Button text="Thách đấu" onAction="#onChallenge" />
+                <Button text="Bảng xếp hạng" onAction="#onLeaderboard" />
+            </HBox>
+            <VBox fx:id="contentBox" styleClass="content-box" />
+        </VBox>
+    </center>
+</BorderPane>

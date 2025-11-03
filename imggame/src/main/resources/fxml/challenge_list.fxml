@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="imggame.imggame.controller.ChallengeListController" spacing="10">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
+    <Label fx:id="infoLabel" text="Danh sách người online" />
+    <ListView fx:id="playersList" prefHeight="300" />
+    <Button fx:id="challengeBtn" text="Thách đấu" />
+</VBox>

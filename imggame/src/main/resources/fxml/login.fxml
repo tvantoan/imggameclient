@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="imggame.controller.LoginController">
+    <children>
+        <VBox alignment="CENTER" spacing="12.0" prefWidth="900" prefHeight="600" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+            <Label text="Imggame - Đăng nhập" styleClass="title" />
+            <TextField fx:id="usernameField" promptText="Username" />
+            <PasswordField fx:id="passwordField" promptText="Password" />
+            <HBox spacing="10" alignment="CENTER">
+                <Button fx:id="loginBtn" text="Đăng nhập" />
+                <Button fx:id="registerBtn" text="Đăng ký" />
+            </HBox>
+            <Label fx:id="errorLabel" />
+        </VBox>
+    </children>
+</AnchorPane>

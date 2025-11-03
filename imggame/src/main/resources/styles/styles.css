@@ -1,0 +1,6 @@
+.root { -fx-font-family: 'Segoe UI', Tahoma, sans-serif; }
+.title { -fx-font-size: 24px; -fx-font-weight: bold; }
+.topbar { -fx-background-color: linear-gradient(#ffffff, #f0f0f0); -fx-border-color: #ddd; }
+.user-name { -fx-font-size: 16px; }
+.user-elo { -fx-font-size: 12px; -fx-text-fill: #666; }
+.content-box { -fx-background-color: #fff; -fx-border-color: #e0e0e0; -fx-padding: 12; -fx-min-height: 300; }
