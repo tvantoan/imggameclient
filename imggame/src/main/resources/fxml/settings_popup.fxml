@@ -1,26 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.collections.FXCollections?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
-<VBox spacing="8" alignment="TOP_LEFT" xmlns:fx="http://javafx.com/fxml" >
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+
+<VBox spacing="12" alignment="TOP_LEFT" xmlns:fx="http://javafx.com/fxml">
     <padding>
-        <Insets top="10" right="10" bottom="10" left="10" />
+        <Insets top="15" right="15" bottom="15" left="15"/>
     </padding>
-    <Label text="Settings" styleClass="subtitle" />
-    <CheckBox text="Âm thanh" selected="true" />
-    <CheckBox text="Hiển thị hiệu ứng" selected="true" />
-    <HBox spacing="8">
-        <Label text="Ngôn ngữ:" />
-        <ChoiceBox>
-            <items>
-                <FXCollections fx:factory="observableArrayList">
-                    <String fx:value="Tiếng Việt" />
-                    <String fx:value="English" />
-                </FXCollections>
-            </items>
-        </ChoiceBox>
-    </HBox>
+
+    <!-- Tiêu đề -->
+    <Label text="Cài đặt" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <!-- Thông tin người chơi -->
+    <TitledPane text="Thông tin người chơi" expanded="true">
+        <VBox spacing="6">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <HBox spacing="10">
+                <Label text="Tên đăng nhập:" style="-fx-font-weight: bold;"/>
+                <Label fx:id="usernameLabel" text="toan123"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Email:" style="-fx-font-weight: bold;"/>
+                <Label fx:id="emailLabel" text="toan@example.com"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Trạng thái:" style="-fx-font-weight: bold;"/>
+                <Label fx:id="statusLabel" text="Online" style="-fx-text-fill: green;"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="ELO:" style="-fx-font-weight: bold;"/>
+                <Label fx:id="eloLabel" text="1500"/>
+            </HBox>
+        </VBox>
+    </TitledPane>
+
+    <!-- Cài đặt hệ thống -->
+    <TitledPane text="Tùy chọn hệ thống" expanded="true">
+        <VBox spacing="8">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <CheckBox text="Âm thanh" selected="true"/>
+            <CheckBox text="Hiển thị hiệu ứng" selected="true"/>
+            <HBox spacing="8">
+                <Label text="Ngôn ngữ:"/>
+                <ChoiceBox>
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Tiếng Việt"/>
+                            <String fx:value="English"/>
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+            </HBox>
+        </VBox>
+    </TitledPane>
+
 </VBox>

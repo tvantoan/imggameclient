@@ -48,7 +48,10 @@ public class RegisterController {
                 String password = passwordField.getText();
                 String confirmPassword = confirmField.getText();
                 System.out.println(username);
-                if (!password.equals(confirmPassword)) {
+                if(username.isEmpty() || password.isEmpty() || email.isEmpty() || confirmPassword.isEmpty()){
+                    infoLabel.setText("Please fill all the field!");
+                }
+                else if (!password.equals(confirmPassword)) {
                     infoLabel.setText("Password must match when retype!");
                 } else {
                     GameService service = new GameService(SessionManager.getClient());

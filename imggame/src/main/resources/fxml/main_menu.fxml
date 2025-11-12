@@ -31,8 +31,8 @@
                 <Insets top="20" right="20" bottom="20" left="20" />
             </padding>
             <HBox spacing="12">
-                <Button text="Ghép ngẫu nhiên" onAction="#onRandomMatch" />
-                <Button text="Thách đấu" onAction="#onChallenge" />
+                <Button text="Tạo phòng" onAction="#onCreateRoom" />
+                <Button text="Join phòng" onAction="#onJoinRoom" />
                 <Button text="Bảng xếp hạng" onAction="#onLeaderboard" />
             </HBox>
             <VBox fx:id="contentBox" styleClass="content-box" />

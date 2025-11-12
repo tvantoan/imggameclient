@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="imggame.controller.JoinRoomController" spacing="10" alignment="CENTER">
+    <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
+
+    <Label text="Danh sách phòng chờ" style="-fx-font-size:14px; -fx-font-weight:600;"/>
+    <ListView fx:id="roomList" prefHeight="300" prefWidth="520"/>
+    <HBox spacing="10">
+        <Button fx:id="refreshBtn" text="Làm mới"/>
+        <Button fx:id="joinBtn" text="Tham gia phòng"/>
+        <Button fx:id="createBtn" text="Tạo phòng mới" />
+    </HBox>
+    <Label fx:id="infoLabel" textFill="gray"/>
+</VBox>

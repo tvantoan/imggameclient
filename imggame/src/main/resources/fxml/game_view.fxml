@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="imggame.controller.GameController"
+            prefWidth="1100" prefHeight="700">
+
+    <top>
+        <HBox spacing="12" alignment="CENTER_LEFT" styleClass="topbar">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Room: #1234" styleClass="room-label" />
+            <Pane HBox.hgrow="ALWAYS" />
+            <HBox spacing="10" alignment="CENTER">
+                <Label fx:id="statusLabel" text="Prepare..." />
+                <Button fx:id="leaveBtn" text="Leave" />
+            </HBox>
+        </HBox>
+    </top>
+
+    <center>
+        <HBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="12" right="12" bottom="12" left="12"/>
+            </padding>
+            <StackPane fx:id="leftPane" styleClass="image-pane">
+                <ImageView fx:id="leftImage" preserveRatio="true" fitWidth="480" fitHeight="480" />
+                <Pane fx:id="leftOverlay" pickOnBounds="false" />
+            </StackPane>
+
+            <StackPane fx:id="rightPane" styleClass="image-pane">
+                <ImageView fx:id="rightImage" preserveRatio="true" fitWidth="480" fitHeight="480" />
+                <Pane fx:id="rightOverlay" pickOnBounds="false" />
+            </StackPane>
+        </HBox>
+    </center>
+
+    <bottom>
+        <VBox spacing="8">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <HBox spacing="12" alignment="CENTER_LEFT">
+                <HBox spacing="6" alignment="CENTER_LEFT">
+                    <Label text="Timer:" />
+                    <StackPane fx:id="countdownWrap">
+                        <!-- CountdownBar will be added programmatically -->
+                    </StackPane>
+                </HBox>
+                <Pane HBox.hgrow="ALWAYS" />
+                <HBox spacing="8">
+                    <Button fx:id="hintBtn" text="Hint" />
+                    <Button fx:id="readyBtn" text="Ready" />
+                </HBox>
+            </HBox>
+
+            <HBox spacing="10">
+                <TextArea fx:id="chatArea" editable="false" prefRowCount="3" wrapText="true" />
+                <HBox spacing="6" alignment="CENTER_RIGHT">
+                    <TextField fx:id="chatInput" promptText="Type message..." />
+                    <Button fx:id="sendBtn" text="Send" />
+                </HBox>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>

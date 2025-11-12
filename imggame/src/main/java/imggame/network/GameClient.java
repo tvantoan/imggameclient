@@ -16,10 +16,19 @@ public class GameClient implements AutoCloseable {
     input = new ObjectInputStream(socket.getInputStream());
   }
 
-  public synchronized void sendPacket(Object packet) throws IOException {
-    output.writeObject(packet);
-    output.flush();
-  }
+    public synchronized void sendPacket(Object packet) throws IOException {
+        try {
+            System.out.println("sending: " + packet.getClass().getName());
+            output.writeObject(packet);
+            output.flush();
+            System.out.println("packet sent OK");
+        } catch (Exception e) {
+            System.out.println("Error while sending packet: " + e.getClass() + " - " + e.getMessage());
+            e.printStackTrace();
+            throw e;
+        }
+    }
+
 
   public synchronized Object receivePacket() throws IOException, ClassNotFoundException {
     return input.readObject();

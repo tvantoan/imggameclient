@@ -1,9 +1,12 @@
 
 package imggame.models;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 public class User implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 1L;
 	private int id;
 	private String username;
 	private String email;
@@ -107,5 +110,8 @@ public class User implements Serializable {
 	public void setElo(int elo) {
 		this.elo = elo;
 	}
-
+    @Override
+    public String toString() {
+        return "User{id=" + id + ", username='" + username + "', email='" + email + "'}";
+    }
 }

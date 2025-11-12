@@ -1,20 +1,21 @@
 package imggame.network.packets;
 
-public class CreateGameRoomRequest extends BasePacket {
-	private static final long serialVersionUID = 1L;
+import imggame.network.types.PacketType;
 
-	private int userId;
+import java.io.Serial;
+
+public class CreateGameRoomRequest extends BasePacket {
+	@Serial
+    private static final long serialVersionUID = 1L;
+
+	public int userId;
 
 	public CreateGameRoomRequest(int userId) {
 		this.userId = userId;
 	}
 
-	public int getUserId() {
-		return userId;
-	}
-
 	@Override
-	public String getType() {
-		return "CREATE_GAME_ROOM";
+	public PacketType getType() {
+		return PacketType.REQUEST;
 	}
 }

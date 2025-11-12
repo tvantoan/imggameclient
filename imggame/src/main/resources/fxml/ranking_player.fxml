@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="imggame.controller.RankingPlayerController"
+      spacing="10" alignment="CENTER">
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+    <Label text="Bảng xếp hạng người chơi" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+
+    <TableView fx:id="rankingTable" prefHeight="400" prefWidth="500">
+        <columns>
+            <TableColumn fx:id="rankCol" text="Hạng" prefWidth="80"/>
+            <TableColumn fx:id="usernameCol" text="Tên người chơi" prefWidth="200"/>
+            <TableColumn fx:id="eloCol" text="ELO" prefWidth="120"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <Button fx:id="refreshBtn" text="Làm mới"/>
+        <Label fx:id="infoLabel" textFill="gray"/>
+    </HBox>
+</VBox>

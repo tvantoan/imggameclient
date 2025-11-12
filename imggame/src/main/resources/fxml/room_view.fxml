@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="imggame.controller.RoomController">
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+            <Label text="Room" style="-fx-font-size:16px; -fx-font-weight:bold;"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button fx:id="leaveBtn" text="Rời phòng"/>
+            <Button fx:id="startBtn" text="Bắt đầu" />
+        </HBox>
+    </top>
+
+    <center>
+        <HBox spacing="20" alignment="CENTER">
+            <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+            <VBox alignment="CENTER" spacing="8">
+                <ImageView fx:id="leftAvatar" fitWidth="120" fitHeight="120"/>
+                <Label fx:id="leftName"/>
+                <Label fx:id="leftElo"/>
+                <Label fx:id="leftRole"/>
+            </VBox>
+
+            <Label text="VS" style="-fx-font-size:28px; -fx-font-weight:bold;"/>
+
+            <VBox alignment="CENTER" spacing="8">
+                <ImageView fx:id="rightAvatar" fitWidth="120" fitHeight="120"/>
+                <Label fx:id="rightName"/>
+                <Label fx:id="rightElo"/>
+                <Label fx:id="rightRole"/>
+                <Button fx:id="readyBtn" text="Sẵn sàng" />
+            </VBox>
+        </HBox>
+    </center>
+
+    <bottom>
+        <HBox spacing="8" alignment="CENTER_LEFT">
+            <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+            <Label fx:id="roomInfo" text="ID phòng:"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button fx:id="inviteBtn" text="Mời người"/>
+        </HBox>
+    </bottom>
+</BorderPane>
