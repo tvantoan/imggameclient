@@ -2,16 +2,20 @@ package imggame.network.packets;
 
 import imggame.network.types.PacketType;
 
-import java.io.Serial;
-
 public class CreateGameRoomRequest extends BasePacket {
-	@Serial
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
 	public int userId;
+	public String roomName;
 
 	public CreateGameRoomRequest(int userId) {
 		this.userId = userId;
+		this.roomName = null;
+	}
+
+	public CreateGameRoomRequest(int userId, String roomName) {
+		this.userId = userId;
+		this.roomName = roomName;
 	}
 
 	@Override
