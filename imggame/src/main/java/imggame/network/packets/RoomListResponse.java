@@ -2,24 +2,25 @@ package imggame.network.packets;
 
 import java.util.List;
 
-class RoomResponse {
-	public String roomId;
-	public String roomName;
-	public int playerCount;
-	public int maxPlayers;
+import imggame.network.types.PacketType;
 
-	public RoomResponse(String roomId, String roomName, int playerCount, int maxPlayers) {
-		this.roomId = roomId;
-		this.roomName = roomName;
-		this.playerCount = playerCount;
-		this.maxPlayers = maxPlayers;
+public class RoomListResponse extends BasePacket {
+	private static final long serialVersionUID = 1L;
+	public List<RoomResponse> rooms;
+
+	public RoomListResponse() {
 	}
-}
-
-public class RoomListResponse {
-	private List<RoomResponse> rooms;
 
 	public List<RoomResponse> getRooms() {
 		return rooms;
+	}
+
+	public void setRooms(List<RoomResponse> rooms) {
+		this.rooms = rooms;
+	}
+
+	@Override
+	public PacketType getType() {
+		return PacketType.DIRECT_RESPONSE;
 	}
 }
