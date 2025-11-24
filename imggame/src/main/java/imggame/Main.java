@@ -3,27 +3,33 @@ package imggame;
 import imggame.core.SessionManager;
 import imggame.utils.SceneManager;
 import javafx.application.Application;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-    private static SceneManager sceneManager;
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        sceneManager = new SceneManager(primaryStage);
-        sceneManager.setScene("/fxml/login.fxml");
+	private static SceneManager sceneManager;
 
-        Scene scene = primaryStage.getScene();
-        if (scene != null) {
-            scene.getStylesheets().add(getClass().getResource("/styles/styles.css").toExternalForm());
-        }
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		SessionManager.connect();
 
-        primaryStage.setTitle("Spot the Difference");
-        primaryStage.show();
-        SessionManager.connect();
-    }
+		primaryStage.setTitle("Spot the Difference");
 
-    public static SceneManager getSceneManager() {
-        return sceneManager;
-    }
+		sceneManager = new SceneManager(primaryStage);
+		sceneManager.setScene("/fxml/login.fxml");
+
+		primaryStage.hide();
+
+		sceneManager.switchScene("/fxml/login.fxml");
+
+		primaryStage.setOnCloseRequest(event -> {
+			System.out.println("Application is closing...");
+			SessionManager.disconnect();
+			javafx.application.Platform.exit();
+			System.exit(0);
+		});
+	}
+
+	public static SceneManager getSceneManager() {
+		return sceneManager;
+	}
 }
