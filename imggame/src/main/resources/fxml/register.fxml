@@ -2,22 +2,30 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="imggame.controller.RegisterController">
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="imggame.controller.RegisterController"
+            stylesheets="@../styles/register.css">
+
     <children>
-        <VBox alignment="CENTER" spacing="15.0" maxWidth="400" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+        <VBox alignment="CENTER" spacing="15.0" maxWidth="400" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" styleClass="register-root">
             <padding>
                 <Insets top="20" right="20" bottom="20" left="20"/>
             </padding>
-            <Label text="Đăng ký" styleClass="title" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
-            <TextField fx:id="usernameField" promptText="Username" prefWidth="350" maxWidth="350" prefHeight="40" style="-fx-font-size: 14px; -fx-padding: 8 12; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #CCCCCC;"/>
-            <TextField fx:id="emailField" promptText="Email" prefWidth="350" maxWidth="350" prefHeight="40" style="-fx-font-size: 14px; -fx-padding: 8 12; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #CCCCCC;"/>
-            <PasswordField fx:id="passwordField" promptText="Password" prefWidth="350" maxWidth="350" prefHeight="40" style="-fx-font-size: 14px; -fx-padding: 8 12; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #CCCCCC;"/>
-            <PasswordField fx:id="confirmField" promptText="Confirm" prefWidth="350" maxWidth="350" prefHeight="40" style="-fx-font-size: 14px; -fx-padding: 8 12; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #CCCCCC;"/>
+
+            <Label text="Đăng ký" styleClass="title"/>
+
+            <TextField fx:id="usernameField" promptText="Username" styleClass="input-field"/>
+            <TextField fx:id="emailField" promptText="Email" styleClass="input-field"/>
+            <PasswordField fx:id="passwordField" promptText="Password" styleClass="input-field"/>
+            <PasswordField fx:id="confirmField" promptText="Confirm" styleClass="input-field"/>
+
             <HBox spacing="15" alignment="CENTER" prefWidth="350" maxWidth="350">
-                <Button fx:id="createBtn" text="Tạo" prefWidth="167" maxWidth="167" prefHeight="40" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;"/>
-                <Button fx:id="backBtn" text="Quay lại" prefWidth="167" maxWidth="167" prefHeight="40" style="-fx-background-color: #9E9E9E; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-cursor: hand;"/>
+                <Button fx:id="createBtn" text="Tạo" styleClass="button-green"/>
+                <Button fx:id="backBtn" text="Quay lại" styleClass="button-gray"/>
             </HBox>
-            <Label fx:id="infoLabel" style="-fx-text-fill: red; -fx-font-size: 12px;"/>
+
+            <Label fx:id="infoLabel" styleClass="info-label"/>
         </VBox>
     </children>
 </AnchorPane>

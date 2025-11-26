@@ -3,36 +3,40 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="imggame.controller.MainMenuController">
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="imggame.controller.MainMenuController"
+            stylesheets="@../styles/mainmenu.css"
+            styleClass="root-borderpane">
+
     <top>
         <HBox spacing="10" alignment="CENTER_LEFT" styleClass="topbar">
             <padding>
-                <Insets top="10" right="10" bottom="10" left="30" />
+                <Insets top="10" right="10" bottom="10" left="30"/>
             </padding>
             <HBox spacing="10" alignment="CENTER_LEFT">
                 <VBox>
-                    <Label fx:id="usernameLabel" styleClass="user-name" />
-                    <Label fx:id="eloLabel" styleClass="user-elo" />
+                    <Label fx:id="usernameLabel" styleClass="user-name"/>
+                    <Label fx:id="eloLabel" styleClass="user-elo"/>
                 </VBox>
             </HBox>
-            <Pane HBox.hgrow="ALWAYS" />
+            <Pane HBox.hgrow="ALWAYS"/>
             <HBox spacing="8">
-                <Button fx:id="logoutBtn" text="Logout" style="-fx-background-color: #F44336; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 8 16;" />
+                <Button fx:id="logoutBtn" text="Logout" styleClass="button-red"/>
             </HBox>
         </HBox>
     </top>
 
-
     <center>
         <VBox spacing="12">
             <padding>
-                <Insets top="20" right="20" bottom="20" left="20" />
+                <Insets top="20" right="20" bottom="20" left="20"/>
             </padding>
             <HBox spacing="12">
-                <Button text="Danh sách phòng" onAction="#onRoomList" style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 12 24; -fx-cursor: hand;" />
-                <Button text="Bảng xếp hạng" onAction="#onLeaderboard" style="-fx-background-color: #FF9800; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 12 24; -fx-cursor: hand;" />
+                <Button fx:id="roomListBtn" text="Danh sách phòng" onAction="#onRoomList" styleClass="button-blue-large"/>
+                <Button fx:id="leaderboardBtn" text="Bảng xếp hạng" onAction="#onLeaderboard" styleClass="button-orange-large"/>
             </HBox>
-            <VBox fx:id="contentBox" styleClass="content-box" />
+            <VBox fx:id="contentBox" styleClass="content-box"/>
         </VBox>
     </center>
 </BorderPane>

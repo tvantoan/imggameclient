@@ -4,6 +4,7 @@ module imggame {
     requires io.github.cdimascio.dotenv.java;
     requires java.desktop;
     requires javafx.graphics;
+    requires javafx.media;
 
     opens imggame.controller to javafx.fxml;
     exports imggame;

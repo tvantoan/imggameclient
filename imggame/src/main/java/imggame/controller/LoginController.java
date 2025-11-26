@@ -8,6 +8,7 @@ import imggame.network.Client;
 import imggame.network.ResponseHandler;
 import imggame.network.packets.LoginRequest;
 import imggame.utils.Async;
+import imggame.utils.MediaPlayerManager;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -71,6 +72,7 @@ public class LoginController {
 				Platform.runLater(() -> {
 					try {
 						Main.getSceneManager().switchScene(ScenePath.MAIN_MENU);
+                        MediaPlayerManager.getInstance().playMusic("hall.mp3", true);
 					} catch (IOException e) {
 						e.printStackTrace();
 					}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox spacing="16" alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="imggame.controller.InviteDialogController"
+      style="-fx-background-color: white; -fx-padding: 20; -fx-border-radius: 10; -fx-background-radius: 10;">
+    <Label fx:id="userLabel" text="User mời bạn:" style="-fx-font-size: 18px;"/>
+    <HBox spacing="16" alignment="CENTER">
+        <Button fx:id="acceptBtn" text="Chấp nhận" style="-fx-font-size: 16px; -fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+        <Button fx:id="declineBtn" text="Từ chối"   style="-fx-font-size: 16px; -fx-background-color: #F44336; -fx-text-fill: white;"/>
+    </HBox>
+</VBox>

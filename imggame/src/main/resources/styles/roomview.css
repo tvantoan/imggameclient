@@ -1,0 +1,95 @@
+/* Player Panes */
+.player-pane {
+    -fx-background-color: #f5f5f5;
+    -fx-padding: 10;
+    -fx-border-width: 3;
+    -fx-border-color: transparent;
+}
+
+/* Left Player Info */
+.player-info-left {
+    -fx-padding: 15;
+}
+
+/* Right Player Info */
+.player-info-right {
+    -fx-padding: 15;
+    -fx-alignment: top-right;
+}
+
+/* Labels */
+.player-name {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+.player-elo {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666666;
+}
+.player-score {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2196F3;
+}
+.player-time {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FF5722;
+}
+
+/* Bottom Pane */
+.bottom-pane {
+    -fx-background-color: #f5f5f5;
+    -fx-padding: 10;
+}
+
+/* Remaining Differences Label */
+.remaining-differences {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FF9800;
+    -fx-alignment: center;
+}
+
+/* Buttons */
+.button-green {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+.button-green:hover {
+    -fx-background-color: #388E3C;
+}
+
+.button-blue {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+.button-blue:hover {
+    -fx-background-color: #1976D2;
+}
+
+.button-red {
+    -fx-background-color: #F44336;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+.button-red:hover {
+    -fx-background-color: #D32F2F;
+}
+
+/* Image Overlays (for highlighting clicks/differences) */
+#orgImageOverlay, #diffImageOverlay {
+    -fx-background-color: rgba(255, 235, 59, 0.3); /* yellow highlight for differences */
+}

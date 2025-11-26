@@ -1,0 +1,74 @@
+/* Root background */
+.root-borderpane {
+    -fx-background-color: #f5f5f5;
+}
+
+/* Top bar */
+.topbar {
+    -fx-background-color: white;
+    -fx-padding: 10 10 10 30;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 5, 0, 0, 2);
+}
+
+/* User info */
+.user-name {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+.user-elo {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666666;
+}
+
+/* Logout button */
+.button-red {
+    -fx-background-color: #F44336;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+}
+.button-red:hover {
+    -fx-background-color: #D32F2F;
+}
+
+/* Main action buttons */
+.button-blue-large {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-padding: 12 24;
+    -fx-cursor: hand;
+}
+.button-blue-large:hover {
+    -fx-background-color: #1976D2;
+}
+
+.button-orange-large {
+    -fx-background-color: #FF9800;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-padding: 12 24;
+    -fx-cursor: hand;
+}
+.button-orange-large:hover {
+    -fx-background-color: #F57C00;
+}
+
+/* Content box */
+.content-box {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}

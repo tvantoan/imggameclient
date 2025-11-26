@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="imggame.controller.InviteListController"
+      spacing="10"
+      alignment="CENTER"
+      stylesheets="@../styles/onlineplayers.css"
+      styleClass="online-root"
+      prefWidth="420">
+
+    <padding>
+        <Insets top="12" right="12" bottom="12" left="12"/>
+    </padding>
+
+    <HBox spacing="10" alignment="CENTER_LEFT" styleClass="header-box">
+        <Label text="Mời người chơi" styleClass="title"/>
+        <Pane HBox.hgrow="ALWAYS"/>
+        <Button fx:id="closeBtn" text="✕" styleClass="button-close"/>
+    </HBox>
+
+    <TableView fx:id="onlineTable" prefHeight="300" prefWidth="380" styleClass="online-table">
+        <columns>
+            <TableColumn fx:id="usernameCol" text="Tên" prefWidth="220"/>
+            <TableColumn fx:id="statusCol" text="Trạng thái" prefWidth="110"/>
+            <TableColumn fx:id="actionCol" text="" prefWidth="50"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button fx:id="refreshBtn" text="Làm mới" styleClass="button-small"/>
+        <Button fx:id="inviteSelectedBtn" text="Mời" styleClass="button-green"/>
+    </HBox>
+
+    <Label fx:id="infoLabel" styleClass="info-label"/>
+</VBox>

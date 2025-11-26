@@ -1,0 +1,82 @@
+/* Root background */
+.joinroom-root {
+    -fx-background-color: #f5f5f5;
+}
+
+/* Header Box */
+.header-box {
+    -fx-background-color: white;
+    -fx-padding: 15;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+/* Header Title */
+.header-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+/* Info Label */
+.info-label {
+    -fx-text-fill: #666666;
+    -fx-font-size: 12px;
+}
+
+/* Room List */
+.room-list {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+/* Placeholder Label */
+.placeholder-label {
+    -fx-text-fill: #999999;
+    -fx-font-size: 14px;
+}
+
+/* Buttons */
+.button-green {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 12 24;
+    -fx-cursor: hand;
+}
+.button-green:hover {
+    -fx-background-color: #388E3C;
+}
+
+.button-gray {
+    -fx-background-color: #9E9E9E;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+}
+.button-gray:hover {
+    -fx-background-color: #757575;
+}
+
+.button-blue {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+}
+.button-blue:hover {
+    -fx-background-color: #1976D2;
+}
